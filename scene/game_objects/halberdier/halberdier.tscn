@@ -1,0 +1,160 @@
+[gd_scene load_steps=24 format=3 uid="uid://gkjsjqkbm64f"]
+
+[ext_resource type="Script" path="res://scene/game_objects/halberdier/halberdier.gd" id="1_oxbkt"]
+[ext_resource type="PackedScene" uid="uid://bknx8pl355mwx" path="res://scene/components/health_component.tscn" id="2_nj2pc"]
+[ext_resource type="PackedScene" uid="uid://c6p3602p5fvng" path="res://scene/components/exp_bottle_drop_component.tscn" id="3_l0l12"]
+[ext_resource type="PackedScene" uid="uid://bbjei16oy5wtp" path="res://scene/components/hurt_box_component.tscn" id="4_k1r4p"]
+[ext_resource type="Texture2D" uid="uid://d1u05yohdksic" path="res://assets/Halberdier.png" id="5_5dxxa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o5a14"]
+height = 48.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1keqb"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(11, 0, 60, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wj4a7"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(68, 0, 60, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aunja"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(124, 0, 60, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuvox"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(179, 0, 60, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_maytx"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(234, 0, 60, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp1ap"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(288, 0, 60, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdb85"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(348, 0, 60, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyumd"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(416, 0, 60, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_et56x"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(483, 0, 60, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjg47"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(591, 0, 60, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y26d7"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(649, 0, 60, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1rbd"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(704, 0, 60, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i32mc"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(766, 0, 60, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ugnl"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(832, 0, 60, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4eknp"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(892, 0, 60, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cb7xh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1keqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wj4a7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aunja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuvox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_maytx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp1ap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdb85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyumd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_et56x")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjg47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y26d7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1rbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i32mc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ugnl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4eknp")
+}],
+"loop": true,
+"name": &"run",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t2ba1"]
+radius = 4.0
+height = 26.0
+
+[node name="Halberdier" type="CharacterBody2D" groups=["enemy"]]
+position = Vector2(0, -24)
+collision_layer = 0
+script = ExtResource("1_oxbkt")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_nj2pc")]
+
+[node name="ExpBottleDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_l0l12")]
+health_component = NodePath("../HealthComponent")
+
+[node name="HurtBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_k1r4p")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBoxComponent"]
+shape = SubResource("CapsuleShape2D_o5a14")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_cb7xh")
+animation = &"run"
+autoplay = "run"
+frame_progress = 0.439703
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 6)
+shape = SubResource("CapsuleShape2D_t2ba1")
