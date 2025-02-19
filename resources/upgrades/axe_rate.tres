@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bvctdr17sp05g"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_magxk"]
+
+[resource]
+script = ExtResource("1_magxk")
+id = "axe_rate"
+name = "Axe Speed"
+description = "increases axe attack speed by 10%"

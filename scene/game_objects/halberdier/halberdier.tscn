@@ -124,7 +124,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 7.0
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t2ba1"]
@@ -133,7 +133,8 @@ height = 26.0
 
 [node name="Halberdier" type="CharacterBody2D" groups=["enemy"]]
 position = Vector2(0, -24)
-collision_layer = 0
+collision_layer = 4
+collision_mask = 5
 script = ExtResource("1_oxbkt")
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_nj2pc")]
@@ -153,8 +154,14 @@ scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_cb7xh")
 animation = &"run"
 autoplay = "run"
-frame_progress = 0.439703
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 6)
 shape = SubResource("CapsuleShape2D_t2ba1")
+
+[node name="EnemyHitBox" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyHitBox"]
+polygon = PackedVector2Array(4, -17, 1, -11, 1, -8, -4, -8, -8, 2, -6, 4, -5, 11, -6, 18, -5, 19, -1, 19, -1, 10, -1, 2, 1, 2, 3, -7, 4, -10, 5, -8, 7, -12, 4, -12)

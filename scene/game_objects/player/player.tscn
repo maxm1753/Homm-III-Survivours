@@ -1,8 +1,20 @@
-[gd_scene load_steps=52 format=3 uid="uid://b0ump57ta6uh8"]
+[gd_scene load_steps=56 format=3 uid="uid://b0ump57ta6uh8"]
 
 [ext_resource type="Script" path="res://scene/game_objects/player/player.gd" id="1_8oolj"]
 [ext_resource type="PackedScene" uid="uid://d02yl8nx3spsb" path="res://scene/abilities/attack_ability/attack_controller.tscn" id="2_prcev"]
+[ext_resource type="PackedScene" uid="uid://bknx8pl355mwx" path="res://scene/components/health_component.tscn" id="3_eave7"]
 [ext_resource type="Texture2D" uid="uid://d3ukp6q1gluku" path="res://assets/player.png" id="3_j2gi1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3lbui"]
+bg_color = Color(0.06938, 0.00374375, 1.50409e-09, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_adcuv"]
+bg_color = Color(0.696741, 0.0151457, 0.172647, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.06938, 0.00374375, 1.50409e-09, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kovgu"]
 radius = 32.0
@@ -378,6 +390,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_0nrqd"]
 radius = 5.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8vkgq"]
+radius = 5.5
+height = 34.0
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 position = Vector2(0, -18)
 collision_layer = 0
@@ -387,12 +403,29 @@ script = ExtResource("1_8oolj")
 
 [node name="AttackController" parent="AbilityManager" instance=ExtResource("2_prcev")]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="HealthComponent" parent="." instance=ExtResource("3_eave7")]
+
+[node name="GracePeriod" type="Timer" parent="."]
+one_shot = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(48, 4)
+offset_left = -24.0
+offset_top = 18.0
+offset_right = 24.0
+offset_bottom = 22.0
+pivot_offset = Vector2(24, 2)
+theme_override_styles/background = SubResource("StyleBoxFlat_3lbui")
+theme_override_styles/fill = SubResource("StyleBoxFlat_adcuv")
+max_value = 1.0
+show_percentage = false
+
+[node name="PickUpArea" type="Area2D" parent="."]
 position = Vector2(0, -5)
 collision_layer = 8
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea"]
 shape = SubResource("CircleShape2D_kovgu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -405,6 +438,15 @@ autoplay = "run_forward"
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_0nrqd")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="PlayerHurtBox" type="Area2D" parent="."]
 position = Vector2(0, -5)
-position_smoothing_enabled = true
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHurtBox"]
+position = Vector2(-0.5, -6)
+shape = SubResource("CapsuleShape2D_8vkgq")
+
+[connection signal="timeout" from="GracePeriod" to="." method="_on_grace_period_timeout"]
+[connection signal="area_entered" from="PlayerHurtBox" to="." method="_on_player_hurt_box_area_entered"]
+[connection signal="area_exited" from="PlayerHurtBox" to="." method="_on_player_hurt_box_area_exited"]

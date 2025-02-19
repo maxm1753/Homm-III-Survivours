@@ -1,10 +1,16 @@
 extends Node
 
-var attack_range = 100
-var sword_damage = 5
-
 @export var attack_ability: PackedScene
+@onready var timer: Timer = $Timer
 
+var attack_range = 100
+var axe_damage = 5
+var default_attack_speed
+
+
+func _ready():
+	Global.ability_upgrade_added.connect(on_upgrade_added)
+	default_attack_speed = timer.wait_time
 
 func _on_timer_timeout():
 	var player = get_tree().get_first_node_in_group("player") as Node2D
@@ -31,10 +37,20 @@ func _on_timer_timeout():
 	var enemy_pos = enemies[0].global_position
 	
 	var attack_instance = attack_ability.instantiate() as AttackAbility
-	player.get_parent().add_child(attack_instance)
-	attack_instance.hit_box_component.damage = sword_damage
+	var front_layer = get_tree().get_first_node_in_group("front_layer")
+	front_layer.add_child(attack_instance)
+	attack_instance.hit_box_component.damage = axe_damage
 	
 	
 	attack_instance.global_position = (enemy_pos + player_pos) / 2
 	
 	attack_instance.look_at(enemy_pos)
+
+func on_upgrade_added(upgrade:AbilityUpgrade, current_upgrades:Dictionary):
+	if upgrade.id != "axe_rate":
+		return
+		
+	var upgrade_percent = current_upgrades["axe_rate"]["quantity"] * .1
+	timer.wait_time = max(0.1, default_attack_speed * (1 - upgrade_percent))
+	timer.start()
+	
