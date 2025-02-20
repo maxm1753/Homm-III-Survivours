@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://dureonvtts7p0"]
+[gd_scene load_steps=3 format=3 uid="uid://dureonvtts7p0"]
+
+[ext_resource type="Script" path="res://scene/abilities/club_ability/club_ability_controller.gd" id="1_346q4"]
+[ext_resource type="PackedScene" uid="uid://dvsg3hertkjh5" path="res://scene/abilities/club_ability/club_ability.tscn" id="2_lnvhb"]
 
 [node name="ClubAbilityController" type="Node"]
+script = ExtResource("1_346q4")
+club_ability_scene = ExtResource("2_lnvhb")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

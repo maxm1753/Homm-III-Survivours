@@ -1,7 +1,8 @@
-[gd_scene load_steps=56 format=3 uid="uid://b0ump57ta6uh8"]
+[gd_scene load_steps=57 format=3 uid="uid://b0ump57ta6uh8"]
 
 [ext_resource type="Script" path="res://scene/game_objects/player/player.gd" id="1_8oolj"]
 [ext_resource type="PackedScene" uid="uid://d02yl8nx3spsb" path="res://scene/abilities/attack_ability/attack_controller.tscn" id="2_prcev"]
+[ext_resource type="PackedScene" uid="uid://dureonvtts7p0" path="res://scene/abilities/club_ability/club_ability_controller.tscn" id="3_0llvs"]
 [ext_resource type="PackedScene" uid="uid://bknx8pl355mwx" path="res://scene/components/health_component.tscn" id="3_eave7"]
 [ext_resource type="Texture2D" uid="uid://d3ukp6q1gluku" path="res://assets/player.png" id="3_j2gi1"]
 
@@ -402,6 +403,8 @@ script = ExtResource("1_8oolj")
 [node name="AbilityManager" type="Node" parent="."]
 
 [node name="AttackController" parent="AbilityManager" instance=ExtResource("2_prcev")]
+
+[node name="ClubAbilityController" parent="AbilityManager" instance=ExtResource("3_0llvs")]
 
 [node name="HealthComponent" parent="." instance=ExtResource("3_eave7")]
 

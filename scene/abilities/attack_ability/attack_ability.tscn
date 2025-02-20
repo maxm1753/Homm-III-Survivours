@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scene/abilities/attack_ability/attack_ability.gd" id="1_8q3cs"]
 [ext_resource type="PackedScene" uid="uid://b2xe2q0ii2gk4" path="res://scene/components/hit_box_component.tscn" id="2_lm5kn"]
-[ext_resource type="Texture2D" uid="uid://dxbqcaf51gv07" path="res://assets/Centaur's Axe.png" id="2_ugu0l"]
+[ext_resource type="Texture2D" uid="uid://dxbqcaf51gv07" path="res://scene/abilities/attack_ability/Centaur's Axe.png" id="2_ugu0l"]
 
 [sub_resource type="Animation" id="Animation_cu0l4"]
 length = 0.5
