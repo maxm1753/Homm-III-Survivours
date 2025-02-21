@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var grace_period: Timer = $GracePeriod
 @onready var progress_bar: ProgressBar = $ProgressBar
 @onready var ability_manager: Node = $AbilityManager
-
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
 var max_speed = 125
@@ -23,6 +23,15 @@ func _process(delta):
 	
 	velocity = velocity.lerp(target_velocity, acceleration)
 	move_and_slide()
+	
+	if direction.x != 0 || direction.y != 0:
+		animated_sprite_2d.play("run_forward")
+	else:
+		animated_sprite_2d.play("idle_forward")
+		
+	var face_sign = sign(direction.x)
+	if face_sign != 0:
+		animated_sprite_2d.scale.x = face_sign
 	
 func movement_vector():
 	var movement_x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")

@@ -1,13 +1,27 @@
-[gd_scene load_steps=24 format=3 uid="uid://gkjsjqkbm64f"]
+[gd_scene load_steps=28 format=3 uid="uid://gkjsjqkbm64f"]
 
 [ext_resource type="Script" path="res://scene/game_objects/halberdier/halberdier.gd" id="1_oxbkt"]
 [ext_resource type="PackedScene" uid="uid://bknx8pl355mwx" path="res://scene/components/health_component.tscn" id="2_nj2pc"]
 [ext_resource type="PackedScene" uid="uid://c6p3602p5fvng" path="res://scene/components/exp_bottle_drop_component.tscn" id="3_l0l12"]
 [ext_resource type="PackedScene" uid="uid://bbjei16oy5wtp" path="res://scene/components/hurt_box_component.tscn" id="4_k1r4p"]
+[ext_resource type="PackedScene" uid="uid://dre2a313bxs5f" path="res://scene/components/movement_component.tscn" id="4_q8ppg"]
 [ext_resource type="Texture2D" uid="uid://d1u05yohdksic" path="res://assets/Halberdier.png" id="5_5dxxa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o5a14"]
-height = 48.0
+radius = 13.0
+height = 78.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbuq2"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(615, 360, 70, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trjjx"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(685, 360, 70, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkjmj"]
+atlas = ExtResource("5_5dxxa")
+region = Rect2(755, 360, 70, 90)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1keqb"]
 atlas = ExtResource("5_5dxxa")
@@ -73,6 +87,20 @@ region = Rect2(892, 0, 60, 120)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_sbuq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trjjx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkjmj")
+}],
+"loop": false,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_1keqb")
 }, {
 "duration": 1.0,
@@ -128,11 +156,12 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t2ba1"]
-radius = 4.0
-height = 26.0
+radius = 7.0
+height = 44.0
 
 [node name="Halberdier" type="CharacterBody2D" groups=["enemy"]]
-position = Vector2(0, -24)
+position = Vector2(0, -19)
+scale = Vector2(0.5, 0.5)
 collision_layer = 4
 collision_mask = 5
 script = ExtResource("1_oxbkt")
@@ -142,6 +171,8 @@ script = ExtResource("1_oxbkt")
 [node name="ExpBottleDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_l0l12")]
 health_component = NodePath("../HealthComponent")
 
+[node name="MovementComponent" parent="." instance=ExtResource("4_q8ppg")]
+
 [node name="HurtBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_k1r4p")]
 health_component = NodePath("../HealthComponent")
 
@@ -149,14 +180,15 @@ health_component = NodePath("../HealthComponent")
 shape = SubResource("CapsuleShape2D_o5a14")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -1.90735e-06)
-scale = Vector2(0.4, 0.4)
+position = Vector2(-3, 6)
 sprite_frames = SubResource("SpriteFrames_cb7xh")
-animation = &"run"
+animation = &"idle"
 autoplay = "run"
+frame_progress = 0.159271
+offset = Vector2(9.35971, -21.8417)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 6)
+position = Vector2(-2, 11)
 shape = SubResource("CapsuleShape2D_t2ba1")
 
 [node name="EnemyHitBox" type="Area2D" parent="."]
@@ -164,4 +196,5 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyHitBox"]
-polygon = PackedVector2Array(4, -17, 1, -11, 1, -8, -4, -8, -8, 2, -6, 4, -5, 11, -6, 18, -5, 19, -1, 19, -1, 10, -1, 2, 1, 2, 3, -7, 4, -10, 5, -8, 7, -12, 4, -12)
+position = Vector2(0, -1)
+polygon = PackedVector2Array(18, -59, 13, -49, 1, -33, -3, -35, -12, -19, -14, -7, -10, -2, -6, 21, -9, 30, -4, 37, 9, 38, 6, 10, 5, 3, 6, -9, 13, -13, 11, -30, 18, -38, 19, -32, 25, -40, 24, -50, 17, -46)

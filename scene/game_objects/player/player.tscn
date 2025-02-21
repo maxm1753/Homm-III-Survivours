@@ -431,7 +431,7 @@ shape = SubResource("CircleShape2D_kovgu")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -14)
 sprite_frames = SubResource("SpriteFrames_x72wf")
-animation = &"run_forward"
+animation = &"idle_forward"
 autoplay = "run_forward"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
