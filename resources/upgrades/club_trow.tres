@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://smkmbl2kokje"]
+
+[ext_resource type="PackedScene" uid="uid://dureonvtts7p0" path="res://scene/abilities/club_ability/club_ability_controller.tscn" id="1_0kdl4"]
+[ext_resource type="Script" path="res://resources/upgrades/new_ability.gd" id="2_n1xxi"]
+
+[resource]
+script = ExtResource("2_n1xxi")
+new_ability_scene = ExtResource("1_0kdl4")
+id = "club_trow"
+name = "Club Trow"
+description = "Spawn's the spining Club"
