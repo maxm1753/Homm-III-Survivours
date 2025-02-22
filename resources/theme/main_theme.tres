@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dj0pt47a44c5r"]
+
+[ext_resource type="FontFile" uid="uid://ctmpic55kjdb" path="res://resources/theme/NbPixelFontBundle_v1_0/Bitfantasy.ttf" id="1_dqkft"]
+
+[resource]
+default_font = ExtResource("1_dqkft")

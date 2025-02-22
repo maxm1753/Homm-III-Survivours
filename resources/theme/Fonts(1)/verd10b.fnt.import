@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://b7wrvnaxjuvn4"
+path="res://.godot/imported/verd10b.fnt-be1eab45757f7842ec9a78f211944875.fontdata"
+
+[deps]
+
+source_file="res://resources/theme/Fonts(1)/verd10b.fnt"
+dest_files=["res://.godot/imported/verd10b.fnt-be1eab45757f7842ec9a78f211944875.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

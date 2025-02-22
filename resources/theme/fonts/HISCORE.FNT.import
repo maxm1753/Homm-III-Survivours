@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://b4311oawneogb"
+path="res://.godot/imported/HISCORE.FNT-da14e17be23332537d09296c9e018e5c.fontdata"
+
+[deps]
+
+source_file="res://resources/theme/fonts/HISCORE.FNT"
+dest_files=["res://.godot/imported/HISCORE.FNT-da14e17be23332537d09296c9e018e5c.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

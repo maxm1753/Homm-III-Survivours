@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://cfjdnlsyu72o2"
+path="res://.godot/imported/smalfont.fnt-a421801c62d2f573c6dadddb253081e3.fontdata"
+
+[deps]
+
+source_file="res://resources/theme/fonts/smallfont_courier/smalfont.fnt"
+dest_files=["res://.godot/imported/smalfont.fnt-a421801c62d2f573c6dadddb253081e3.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

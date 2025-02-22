@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://ecrbrm31u2nf"
+path="res://.godot/imported/bigfont.fnt-33ceb46574b85cc1b51ebf87887429c2.fontdata"
+
+[deps]
+
+source_file="res://resources/theme/Fonts(1)/bigfont.fnt"
+dest_files=["res://.godot/imported/bigfont.fnt-33ceb46574b85cc1b51ebf87887429c2.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

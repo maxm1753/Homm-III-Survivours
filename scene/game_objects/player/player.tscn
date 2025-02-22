@@ -1,9 +1,16 @@
-[gd_scene load_steps=56 format=3 uid="uid://b0ump57ta6uh8"]
+[gd_scene load_steps=59 format=3 uid="uid://b0ump57ta6uh8"]
 
 [ext_resource type="Script" path="res://scene/game_objects/player/player.gd" id="1_8oolj"]
 [ext_resource type="PackedScene" uid="uid://d02yl8nx3spsb" path="res://scene/abilities/attack_ability/attack_controller.tscn" id="2_prcev"]
 [ext_resource type="PackedScene" uid="uid://bknx8pl355mwx" path="res://scene/components/health_component.tscn" id="3_eave7"]
-[ext_resource type="Texture2D" uid="uid://d3ukp6q1gluku" path="res://assets/player.png" id="3_j2gi1"]
+[ext_resource type="Texture2D" uid="uid://d3ukp6q1gluku" path="res://assets/player/player.png" id="3_j2gi1"]
+[ext_resource type="PackedScene" uid="uid://du8q88maxl7lh" path="res://scene/components/flash_component.tscn" id="4_hyd4m"]
+[ext_resource type="Shader" path="res://scene/components/flash_component.gdshader" id="5_ucrvi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p13cp"]
+resource_local_to_scene = true
+shader = ExtResource("5_ucrvi")
+shader_parameter/percent = 0.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3lbui"]
 bg_color = Color(0.06938, 0.00374375, 1.50409e-09, 1)
@@ -17,7 +24,7 @@ border_width_bottom = 1
 border_color = Color(0.06938, 0.00374375, 1.50409e-09, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kovgu"]
-radius = 32.0
+radius = 32.0156
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x6qaj"]
 atlas = ExtResource("3_j2gi1")
@@ -404,6 +411,11 @@ script = ExtResource("1_8oolj")
 [node name="AttackController" parent="AbilityManager" instance=ExtResource("2_prcev")]
 
 [node name="HealthComponent" parent="." instance=ExtResource("3_eave7")]
+
+[node name="FlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("4_hyd4m")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../AnimatedSprite2D")
+flash_material = SubResource("ShaderMaterial_p13cp")
 
 [node name="GracePeriod" type="Timer" parent="."]
 one_shot = true

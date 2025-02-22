@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://ctn8gd47b2l2t"
+path="res://.godot/imported/MedFont.fnt-61f8c1795be41434ff354d1acf0ec96c.fontdata"
+
+[deps]
+
+source_file="res://resources/theme/Fonts(1)/MedFont.fnt"
+dest_files=["res://.godot/imported/MedFont.fnt-61f8c1795be41434ff354d1acf0ec96c.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

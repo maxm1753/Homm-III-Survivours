@@ -1,11 +1,18 @@
-[gd_scene load_steps=29 format=3 uid="uid://hw1qoyik106u"]
+[gd_scene load_steps=32 format=3 uid="uid://hw1qoyik106u"]
 
 [ext_resource type="Script" path="res://scene/game_objects/halberdier/halberdier.gd" id="1_gkukm"]
 [ext_resource type="PackedScene" uid="uid://bknx8pl355mwx" path="res://scene/components/health_component.tscn" id="2_la2n2"]
 [ext_resource type="PackedScene" uid="uid://c6p3602p5fvng" path="res://scene/components/exp_bottle_drop_component.tscn" id="3_wqyrf"]
 [ext_resource type="PackedScene" uid="uid://dre2a313bxs5f" path="res://scene/components/movement_component.tscn" id="4_7vj6l"]
 [ext_resource type="PackedScene" uid="uid://bbjei16oy5wtp" path="res://scene/components/hurt_box_component.tscn" id="4_vtprn"]
-[ext_resource type="Texture2D" uid="uid://c2frj7d5urwtl" path="res://assets/Pikeman.png" id="6_motx6"]
+[ext_resource type="PackedScene" uid="uid://du8q88maxl7lh" path="res://scene/components/flash_component.tscn" id="5_di0r6"]
+[ext_resource type="Shader" path="res://scene/components/flash_component.gdshader" id="6_3n0rd"]
+[ext_resource type="Texture2D" uid="uid://c2frj7d5urwtl" path="res://assets/enemies/Pikeman.png" id="6_motx6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b10ik"]
+resource_local_to_scene = true
+shader = ExtResource("6_3n0rd")
+shader_parameter/percent = 0.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nurw7"]
 radius = 13.0
@@ -179,6 +186,11 @@ script = ExtResource("1_gkukm")
 health_component = NodePath("../HealthComponent")
 
 [node name="MovementComponent" parent="." instance=ExtResource("4_7vj6l")]
+
+[node name="FlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("5_di0r6")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../AnimatedSprite2D")
+flash_material = SubResource("ShaderMaterial_b10ik")
 
 [node name="HurtBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_vtprn")]
 health_component = NodePath("../HealthComponent")

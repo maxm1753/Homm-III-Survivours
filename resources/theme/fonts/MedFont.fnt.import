@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://coclagx80s6tg"
+path="res://.godot/imported/MedFont.fnt-cbdf41a1d8ceb0e9ebcc642570040203.fontdata"
+
+[deps]
+
+source_file="res://resources/theme/fonts/MedFont.fnt"
+dest_files=["res://.godot/imported/MedFont.fnt-cbdf41a1d8ceb0e9ebcc642570040203.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

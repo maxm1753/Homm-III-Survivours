@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://c1qiku2nfd6yn"
+path="res://.godot/imported/CALLI10R.FNT-ae8a5fff1d3f3e55beed3d230c29721a.fontdata"
+
+[deps]
+
+source_file="res://resources/theme/fonts/CALLI10R.FNT"
+dest_files=["res://.godot/imported/CALLI10R.FNT-ae8a5fff1d3f3e55beed3d230c29721a.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

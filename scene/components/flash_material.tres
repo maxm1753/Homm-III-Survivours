@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c65mstslkiycr"]
+
+[ext_resource type="Shader" path="res://scene/components/flash_component.gdshader" id="1_xwpms"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_xwpms")
+shader_parameter/percent = 0.0
