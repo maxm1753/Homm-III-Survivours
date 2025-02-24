@@ -6,7 +6,6 @@ extends CharacterBody2D
 @onready var ability_manager: Node = $AbilityManager
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-
 var max_speed = 125
 var acceleration = .15
 var enemies_colliding = 0
@@ -24,10 +23,12 @@ func _process(delta):
 	velocity = velocity.lerp(target_velocity, acceleration)
 	move_and_slide()
 	
+	
+	
 	if direction.x != 0 || direction.y != 0:
-		animated_sprite_2d.play("run_forward")
+		animated_sprite_2d.play("walk_west")
 	else:
-		animated_sprite_2d.play("idle_forward")
+		animated_sprite_2d.play("idle_west")
 		
 	var face_sign = sign(direction.x)
 	if face_sign != 0:

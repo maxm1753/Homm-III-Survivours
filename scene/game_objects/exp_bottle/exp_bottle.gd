@@ -12,9 +12,9 @@ func tween_exp_bottle(percent: float, start_position: Vector2):
 	global_position = start_position.lerp(player.global_position, percent)
 	
 	var direction = player.global_position - start_position
-	var direction_degrece = rad_to_deg(direction.angle())
+	var direction_degrees = rad_to_deg(direction.angle())
 	
-	rotation = lerp_angle(rotation, direction_degrece, 0.05)
+	rotation = lerp_angle(rotation, direction_degrees, 0.05)
 
 func exp_collected():
 	Global.experience_bottle_collected.emit(bottle_experience)

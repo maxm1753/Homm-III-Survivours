@@ -1,55 +1,192 @@
-[gd_scene load_steps=11 format=4 uid="uid://npp4lo05nwg5"]
+[gd_scene load_steps=21 format=4 uid="uid://npp4lo05nwg5"]
 
+[ext_resource type="Script" path="res://scene/menu/menu.gd" id="1_juxiu"]
 [ext_resource type="TileSet" uid="uid://e5gea1nudkw5" path="res://resources/world.tres" id="1_tmd1k"]
-[ext_resource type="Texture2D" uid="uid://bs1gr7b7g6hmb" path="res://scene/menu/AVXfw00.png" id="2_8aosf"]
-[ext_resource type="Texture2D" uid="uid://denb8xqsdn0rb" path="res://scene/menu/AVXfw01.png" id="3_h03lx"]
-[ext_resource type="Texture2D" uid="uid://ds1t5kjww5sjo" path="res://scene/menu/AVXfw02.png" id="4_dh0ci"]
-[ext_resource type="Texture2D" uid="uid://b4fdexqdbqqua" path="res://scene/menu/AVXfw03.png" id="5_txqdm"]
-[ext_resource type="Texture2D" uid="uid://b2ay7fo0he3ir" path="res://scene/menu/AVXfw04.png" id="6_l7bkc"]
-[ext_resource type="Texture2D" uid="uid://b8cos7gcqpq3" path="res://scene/menu/AVXfw05.png" id="7_73epk"]
-[ext_resource type="Texture2D" uid="uid://cj6ea4q26crs2" path="res://scene/menu/AVXfw06.png" id="8_ps7sy"]
-[ext_resource type="Texture2D" uid="uid://2nhcsju5c2yt" path="res://scene/menu/AVXfw07.png" id="9_dxqyi"]
+[ext_resource type="Script" path="res://scene/menu/bg.gd" id="2_tjsmv"]
+[ext_resource type="Texture2D" uid="uid://bk21ygwbuahav" path="res://assets/Terrains/clouds/AVXfw00_processed.png" id="3_ou8f5"]
+[ext_resource type="Texture2D" uid="uid://bax07j2n66h1n" path="res://assets/Terrains/clouds/AVXfw01_processed.png" id="4_njc5m"]
+[ext_resource type="Texture2D" uid="uid://cjsumbgbqqv7u" path="res://assets/Terrains/clouds/AVXfw02_processed.png" id="5_hd6og"]
+[ext_resource type="Texture2D" uid="uid://xtyx0vivmsou" path="res://assets/Terrains/clouds/AVXfw03_processed.png" id="6_vme42"]
+[ext_resource type="Texture2D" uid="uid://c1aupphyyi63v" path="res://assets/Terrains/clouds/AVXfw04_processed.png" id="7_li76y"]
+[ext_resource type="Texture2D" uid="uid://ci2m471w3skn2" path="res://assets/Terrains/clouds/AVXfw05_processed.png" id="8_kk3ob"]
+[ext_resource type="Texture2D" uid="uid://k5a3ted0775m" path="res://assets/Terrains/clouds/AVXfw06_processed.png" id="9_s8nq2"]
+[ext_resource type="Texture2D" uid="uid://c7pyv4edydai4" path="res://assets/Terrains/clouds/AVXfw07_processed.png" id="10_wbb0i"]
+[ext_resource type="Texture2D" uid="uid://6j6dmdcx0a72" path="res://assets/Terrains/clouds/AVXfw10_processed.png" id="11_pillh"]
+[ext_resource type="Texture2D" uid="uid://cegjy2gg1dq43" path="res://assets/Terrains/clouds/AVXfw11_processed.png" id="12_8hw6n"]
+[ext_resource type="Texture2D" uid="uid://c0hktwrvluoi4" path="res://assets/Terrains/clouds/AVXfw12_processed.png" id="13_vlbjt"]
+[ext_resource type="Texture2D" uid="uid://bxkorud142g2t" path="res://assets/Terrains/clouds/AVXfw13_processed.png" id="14_vfit7"]
+[ext_resource type="Texture2D" uid="uid://c1rksok5d7xf7" path="res://assets/Terrains/clouds/AVXfw14_processed.png" id="15_76tas"]
+[ext_resource type="Texture2D" uid="uid://fvcfdkk857qg" path="res://assets/Terrains/clouds/AVXfw15_processed.png" id="16_5a4ys"]
+[ext_resource type="Texture2D" uid="uid://cwogjrgssxhfc" path="res://assets/Terrains/clouds/AVXfw16_processed.png" id="17_l2dih"]
+[ext_resource type="Texture2D" uid="uid://bkegp67y4rjy6" path="res://assets/Terrains/clouds/AVXfw17_processed.png" id="18_74bsp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r8u10"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_8aosf")
+"texture": ExtResource("3_ou8f5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_h03lx")
+"texture": ExtResource("4_njc5m")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_dh0ci")
+"texture": ExtResource("5_hd6og")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_txqdm")
+"texture": ExtResource("6_vme42")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_l7bkc")
+"texture": ExtResource("7_li76y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_73epk")
+"texture": ExtResource("8_kk3ob")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_ps7sy")
+"texture": ExtResource("9_s8nq2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_dxqyi")
+"texture": ExtResource("10_wbb0i")
 }],
 "loop": true,
-"name": &"cloud",
-"speed": 10.0
+"name": &"cloud1",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_pillh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8hw6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vlbjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vfit7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_76tas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5a4ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_l2dih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_74bsp")
+}],
+"loop": true,
+"name": &"cloud2",
+"speed": 15.0
 }]
 
 [node name="Menu" type="Node"]
+script = ExtResource("1_juxiu")
+
+[node name="BG" type="ParallaxBackground" parent="."]
+layer = 0
+script = ExtResource("2_tjsmv")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
+motion_scale = Vector2(2, 1)
+motion_mirroring = Vector2(640, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BG/ParallaxLayer"]
+position = Vector2(320, 180)
+scale = Vector2(4.18301, 3.52941)
+sprite_frames = SubResource("SpriteFrames_r8u10")
+animation = &"cloud1"
+autoplay = "cloud1"
+frame_progress = 0.816254
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="BG"]
+motion_mirroring = Vector2(640, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="BG/ParallaxLayer2"]
+position = Vector2(320, 180)
+scale = Vector2(3.13725, 2.35294)
+sprite_frames = SubResource("SpriteFrames_r8u10")
+animation = &"cloud2"
+autoplay = "cloud2"
+frame_progress = 0.52537
 
 [node name="Back" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AABrAG4AAAAAAAAAAAATAAoAAAACAAUAAAATAAkAAAACAAUAAAATAAgAAAADAAUAAAATAAcAAAACAAUAAAATAAYAAAAAAAUAAAATAAUAAAAAAAUAAAATAAQAAAADAAUAAAATAAMAAAAAAAUAAAATAAIAAAACAAUAAAATAAEAAAACAAUAAAATAAAAAAACAAQAAAASAAoAAAAEAAMAAAASAAkAAAAEAAEAAAASAAgAAAAEAAIAAAASAAcAAAAFAAUAAAASAAYAAAAEAAIAAAASAAUAAAAEAAYAAAASAAQAAAADAAYAAAASAAMAAAAAAAQAAAASAAIAAAAEAAYAAAASAAEAAAACAAYAAAASAAAAAAAFAAMAAAARAAoAAAACAAMAAAARAAkAAAAEAAIAAAARAAgAAAAEAAEAAAARAAcAAAAFAAUAAAARAAYAAAAEAAYAAAARAAUAAAABAAMAAAARAAQAAAABAAMAAAARAAMAAAAFAAYAAAARAAIAAAACAAMAAAARAAEAAAABAAMAAAARAAAAAAAFAAMAAAAQAAoAAAAEAAAAAAAQAAkAAAAEAAIAAAAQAAgAAAABAAYAAAAQAAcAAAAGAAYAAAAQAAYAAAADAAYAAAAQAAUAAAAAAAQAAAAQAAQAAAACAAMAAAAQAAMAAAACAAMAAAAQAAIAAAAEAAAAAAAQAAEAAAAEAAMAAAAQAAAAAAAFAAMAAAAPAAoAAAABAAMAAAAPAAkAAAAAAAQAAAAPAAgAAAAEAAQAAAAPAAcAAAAFAAUAAAAPAAYAAAACAAYAAAAPAAUAAAAEAAQAAAAPAAQAAAACAAYAAAAPAAMAAAADAAYAAAAPAAIAAAAEAAQAAAAPAAEAAAADAAMAAAAPAAAAAAAFAAQAAAAOAAoAAAACAAYAAAAOAAkAAAAEAAYAAAAOAAgAAAAFAAYAAAAOAAcAAAAAAAQAAAAOAAYAAAACAAMAAAAOAAUAAAABAAYAAAAOAAQAAAAEAAQAAAAOAAMAAAAEAAQAAAAOAAIAAAAEAAIAAAAOAAEAAAAFAAUAAAAOAAAAAAAFAAIAAAANAAoAAAAEAAIAAAANAAkAAAAFAAUAAAANAAgAAAAGAAYAAAANAAcAAAAEAAEAAAANAAYAAAAEAAEAAAANAAUAAAADAAMAAAANAAQAAAABAAYAAAANAAMAAAAEAAMAAAANAAIAAAAFAAUAAAANAAEAAAAEAAIAAAANAAAAAAAFAAIAAAAMAAoAAAAEAAIAAAAMAAkAAAAEAAAAAAAMAAgAAAADAAMAAAAMAAcAAAABAAYAAAAMAAYAAAACAAMAAAAMAAUAAAAEAAQAAAAMAAQAAAADAAYAAAAMAAMAAAAEAAMAAAAMAAIAAAADAAYAAAAMAAEAAAAAAAQAAAAMAAAAAAAFAAEAAAALAAoAAAAEAAEAAAALAAkAAAADAAMAAAALAAgAAAAFAAUAAAALAAcAAAABAAMAAAALAAYAAAAAAAQAAAALAAUAAAACAAYAAAALAAQAAAAEAAAAAAALAAMAAAAEAAEAAAALAAIAAAADAAYAAAALAAEAAAAFAAYAAAALAAAAAAAFAAIAAAAKAAoAAAADAAYAAAAKAAkAAAAEAAEAAAAKAAgAAAAEAAYAAAAKAAcAAAABAAMAAAAKAAYAAAAFAAYAAAAKAAUAAAACAAYAAAAKAAQAAAAFAAUAAAAKAAMAAAAEAAEAAAAKAAIAAAADAAYAAAAKAAEAAAAEAAAAAAAKAAAAAAAFAAEAAAAJAAoAAAABAAMAAAAJAAkAAAAEAAIAAAAJAAgAAAAGAAYAAAAJAAcAAAAEAAIAAAAJAAYAAAAFAAYAAAAJAAUAAAAAAAQAAAAJAAQAAAAFAAUAAAAJAAMAAAAEAAEAAAAJAAIAAAAFAAYAAAAJAAEAAAAEAAMAAAAJAAAAAAAFAAMAAAAIAAoAAAADAAYAAAAIAAkAAAAEAAMAAAAIAAgAAAAFAAYAAAAIAAcAAAABAAMAAAAIAAYAAAADAAMAAAAIAAUAAAACAAMAAAAIAAQAAAAEAAQAAAAIAAMAAAAFAAYAAAAIAAIAAAACAAMAAAAIAAEAAAAAAAQAAAAIAAAAAAAFAAIAAAAHAAoAAAAFAAYAAAAHAAkAAAAFAAYAAAAHAAgAAAABAAMAAAAHAAcAAAAEAAQAAAAHAAYAAAABAAYAAAAHAAUAAAAEAAYAAAAHAAQAAAABAAYAAAAHAAMAAAAEAAQAAAAHAAIAAAACAAMAAAAHAAEAAAADAAYAAAAHAAAAAAAFAAMAAAAGAAoAAAABAAYAAAAGAAkAAAACAAYAAAAGAAgAAAADAAYAAAAGAAcAAAAGAAYAAAAGAAYAAAAEAAIAAAAGAAUAAAABAAYAAAAGAAQAAAACAAMAAAAGAAMAAAAFAAUAAAAGAAIAAAABAAYAAAAGAAEAAAAEAAIAAAAGAAAAAAAFAAQAAAAFAAoAAAAEAAEAAAAFAAkAAAACAAYAAAAFAAgAAAADAAYAAAAFAAcAAAAFAAUAAAAFAAYAAAABAAMAAAAFAAUAAAACAAMAAAAFAAQAAAAFAAYAAAAFAAMAAAAEAAIAAAAFAAIAAAACAAYAAAAFAAEAAAADAAYAAAAFAAAAAAAFAAIAAAAEAAoAAAACAAYAAAAEAAkAAAAEAAIAAAAEAAgAAAAFAAYAAAAEAAcAAAAFAAYAAAAEAAYAAAAEAAAAAAAEAAUAAAAFAAUAAAAEAAQAAAADAAYAAAAEAAMAAAAAAAQAAAAEAAIAAAADAAYAAAAEAAEAAAACAAMAAAAEAAAAAAAFAAQAAAADAAoAAAAEAAYAAAADAAkAAAAEAAIAAAADAAgAAAAEAAEAAAADAAcAAAACAAMAAAADAAYAAAADAAMAAAADAAUAAAABAAMAAAADAAQAAAAFAAUAAAADAAMAAAAEAAQAAAADAAIAAAAEAAEAAAADAAEAAAAEAAEAAAADAAAAAAAFAAMAAAACAAoAAAAEAAAAAAACAAkAAAAAAAQAAAACAAgAAAAFAAUAAAACAAcAAAACAAMAAAACAAYAAAAFAAYAAAACAAUAAAADAAMAAAACAAQAAAAEAAMAAAACAAMAAAADAAMAAAACAAIAAAAFAAYAAAACAAEAAAABAAYAAAACAAAAAAAFAAIAAAABAAoAAAAEAAIAAAABAAkAAAAEAAAAAAABAAgAAAAEAAQAAAABAAcAAAAEAAEAAAABAAYAAAAAAAQAAAABAAUAAAAEAAYAAAABAAQAAAACAAMAAAABAAMAAAAEAAEAAAABAAIAAAAEAAAAAAABAAEAAAAGAAYAAAABAAAAAAAFAAMAAAAAAAoAAAAAAAYAAAAAAAkAAAAGAAQAAAAAAAgAAAAAAAYAAAAAAAcAAAAGAAMAAAAAAAYAAAAAAAYAAAAAAAUAAAAGAAMAAAAAAAQAAAAGAAMAAAAAAAMAAAAAAAYAAAAAAAIAAAAGAAQAAAAAAAEAAAAGAAUAAAAAAAAAAAABAAQAAAATAAsAAAADAAQAAAASAAsAAAAGAAIAAAARAAsAAAAGAAIAAAAQAAsAAAAGAAAAAAAPAAsAAAAEAAUAAAAOAAsAAAAGAAAAAAANAAsAAAAGAAEAAAAMAAsAAAAGAAAAAAALAAsAAAAGAAAAAAAKAAsAAAAGAAIAAAAJAAsAAAAEAAUAAAAIAAsAAAAGAAIAAAAHAAsAAAAGAAEAAAAGAAsAAAAEAAUAAAAFAAsAAAAGAAEAAAAEAAsAAAAGAAIAAAADAAsAAAAGAAIAAAACAAsAAAAEAAUAAAABAAsAAAAGAAIAAAAAAAsAAAAFAAAAAAA=")
 tile_set = ExtResource("1_tmd1k")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Back"]
-position = Vector2(320, 180)
-scale = Vector2(3.33333, 2.8125)
-sprite_frames = SubResource("SpriteFrames_r8u10")
-animation = &"cloud"
+[node name="Play" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -108.0
+offset_right = 51.0
+offset_bottom = -59.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+text = "Play"
+
+[node name="Load" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -44.0
+offset_right = 23.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Load"
+
+[node name="Save" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -12.0
+offset_right = 24.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Save"
+
+[node name="Settings" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = 44.0
+offset_right = 33.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Settings"
+
+[node name="Quit" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = 84.0
+offset_right = 19.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

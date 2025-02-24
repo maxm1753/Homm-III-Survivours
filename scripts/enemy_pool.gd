@@ -1,4 +1,4 @@
-class_name EmenyPool
+class_name EnenyPool
 
 var mobs: Array[Dictionary] = []
 var weight_sum = 0

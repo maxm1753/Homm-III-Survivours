@@ -9,7 +9,7 @@ extends Node
 var base_spawn_time
 var min_spawn_time = 0.2
 var difficulty_multiplier = 0.01
-var enemy_pool = EmenyPool.new()
+var enemy_pool = EnenyPool.new()
 
 func _ready():
 	enemy_pool.add_mob(pikeman_scene, 30)
