@@ -56,10 +56,21 @@ func get_direction(input_vector: Vector2) -> Direction:
 	var abs_x = abs(input_vector.x)
 	var abs_y = abs(input_vector.y)
 	
-	# Определяем основное направление
-	if abs_x > abs_y:
+	# Определяем направление с учетом диагоналей
+	if abs_x > 0.5 && abs_y > 0.5:  # Проверка для диагональных направлений
+		if input_vector.x > 0:  # Восточное направление
+			if input_vector.y > 0:
+				return Direction.SOUTHEAST
+			else:
+				return Direction.NORTHEAST
+		else:  # Западное направление
+			if input_vector.y > 0:
+				return Direction.SOUTHWEST
+			else:
+				return Direction.NORTHWEST
+	elif abs_x > abs_y:  # Горизонтальное направление сильнее
 		return Direction.EAST if input_vector.x > 0 else Direction.WEST
-	else:
+	else:  # Вертикальное направление сильнее
 		return Direction.SOUTH if input_vector.y > 0 else Direction.NORTH
 
 func play_walk_animation():
