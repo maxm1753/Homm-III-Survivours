@@ -131,6 +131,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 50
 text = "Play"
+metadata/_edit_use_anchors_ = true
 
 [node name="Load" type="Button" parent="."]
 anchors_preset = 8
@@ -145,6 +146,7 @@ offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Load"
+metadata/_edit_use_anchors_ = true
 
 [node name="Save" type="Button" parent="."]
 anchors_preset = 8
@@ -159,6 +161,7 @@ offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Save"
+metadata/_edit_use_anchors_ = true
 
 [node name="Settings" type="Button" parent="."]
 anchors_preset = 8
@@ -173,6 +176,7 @@ offset_bottom = 65.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Settings"
+metadata/_edit_use_anchors_ = true
 
 [node name="Quit" type="Button" parent="."]
 anchors_preset = 8
@@ -187,6 +191,7 @@ offset_bottom = 105.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Quit"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
