@@ -1,51 +1,51 @@
 [gd_scene load_steps=21 format=4 uid="uid://npp4lo05nwg5"]
 
-[ext_resource type="Script" path="res://scene/menu/menu.gd" id="1_juxiu"]
-[ext_resource type="TileSet" uid="uid://e5gea1nudkw5" path="res://resources/world.tres" id="1_tmd1k"]
-[ext_resource type="Script" path="res://scene/menu/bg.gd" id="2_tjsmv"]
-[ext_resource type="Texture2D" uid="uid://bk21ygwbuahav" path="res://assets/Terrains/clouds/AVXfw00_processed.png" id="3_ou8f5"]
-[ext_resource type="Texture2D" uid="uid://bax07j2n66h1n" path="res://assets/Terrains/clouds/AVXfw01_processed.png" id="4_njc5m"]
-[ext_resource type="Texture2D" uid="uid://cjsumbgbqqv7u" path="res://assets/Terrains/clouds/AVXfw02_processed.png" id="5_hd6og"]
-[ext_resource type="Texture2D" uid="uid://xtyx0vivmsou" path="res://assets/Terrains/clouds/AVXfw03_processed.png" id="6_vme42"]
-[ext_resource type="Texture2D" uid="uid://c1aupphyyi63v" path="res://assets/Terrains/clouds/AVXfw04_processed.png" id="7_li76y"]
-[ext_resource type="Texture2D" uid="uid://ci2m471w3skn2" path="res://assets/Terrains/clouds/AVXfw05_processed.png" id="8_kk3ob"]
-[ext_resource type="Texture2D" uid="uid://k5a3ted0775m" path="res://assets/Terrains/clouds/AVXfw06_processed.png" id="9_s8nq2"]
-[ext_resource type="Texture2D" uid="uid://c7pyv4edydai4" path="res://assets/Terrains/clouds/AVXfw07_processed.png" id="10_wbb0i"]
-[ext_resource type="Texture2D" uid="uid://6j6dmdcx0a72" path="res://assets/Terrains/clouds/AVXfw10_processed.png" id="11_pillh"]
-[ext_resource type="Texture2D" uid="uid://cegjy2gg1dq43" path="res://assets/Terrains/clouds/AVXfw11_processed.png" id="12_8hw6n"]
-[ext_resource type="Texture2D" uid="uid://c0hktwrvluoi4" path="res://assets/Terrains/clouds/AVXfw12_processed.png" id="13_vlbjt"]
-[ext_resource type="Texture2D" uid="uid://bxkorud142g2t" path="res://assets/Terrains/clouds/AVXfw13_processed.png" id="14_vfit7"]
-[ext_resource type="Texture2D" uid="uid://c1rksok5d7xf7" path="res://assets/Terrains/clouds/AVXfw14_processed.png" id="15_76tas"]
-[ext_resource type="Texture2D" uid="uid://fvcfdkk857qg" path="res://assets/Terrains/clouds/AVXfw15_processed.png" id="16_5a4ys"]
-[ext_resource type="Texture2D" uid="uid://cwogjrgssxhfc" path="res://assets/Terrains/clouds/AVXfw16_processed.png" id="17_l2dih"]
-[ext_resource type="Texture2D" uid="uid://bkegp67y4rjy6" path="res://assets/Terrains/clouds/AVXfw17_processed.png" id="18_74bsp"]
+[ext_resource type="Script" path="res://scene/menu/main_menu/main_menu.gd" id="1_4vccb"]
+[ext_resource type="Script" path="res://scene/menu/main_menu/bg.gd" id="2_6ubn3"]
+[ext_resource type="Texture2D" uid="uid://bk21ygwbuahav" path="res://assets/Terrains/clouds/AVXfw00_processed.png" id="3_mpkw7"]
+[ext_resource type="Texture2D" uid="uid://bax07j2n66h1n" path="res://assets/Terrains/clouds/AVXfw01_processed.png" id="4_2j6n5"]
+[ext_resource type="Texture2D" uid="uid://cjsumbgbqqv7u" path="res://assets/Terrains/clouds/AVXfw02_processed.png" id="5_jjh61"]
+[ext_resource type="Texture2D" uid="uid://xtyx0vivmsou" path="res://assets/Terrains/clouds/AVXfw03_processed.png" id="6_wsvhm"]
+[ext_resource type="Texture2D" uid="uid://c1aupphyyi63v" path="res://assets/Terrains/clouds/AVXfw04_processed.png" id="7_7v6hf"]
+[ext_resource type="Texture2D" uid="uid://ci2m471w3skn2" path="res://assets/Terrains/clouds/AVXfw05_processed.png" id="8_b2dic"]
+[ext_resource type="Texture2D" uid="uid://k5a3ted0775m" path="res://assets/Terrains/clouds/AVXfw06_processed.png" id="9_qxv33"]
+[ext_resource type="Texture2D" uid="uid://c7pyv4edydai4" path="res://assets/Terrains/clouds/AVXfw07_processed.png" id="10_cef3i"]
+[ext_resource type="Texture2D" uid="uid://6j6dmdcx0a72" path="res://assets/Terrains/clouds/AVXfw10_processed.png" id="11_2embn"]
+[ext_resource type="Texture2D" uid="uid://cegjy2gg1dq43" path="res://assets/Terrains/clouds/AVXfw11_processed.png" id="12_g4usb"]
+[ext_resource type="Texture2D" uid="uid://c0hktwrvluoi4" path="res://assets/Terrains/clouds/AVXfw12_processed.png" id="13_tqvdd"]
+[ext_resource type="Texture2D" uid="uid://bxkorud142g2t" path="res://assets/Terrains/clouds/AVXfw13_processed.png" id="14_5kkmb"]
+[ext_resource type="Texture2D" uid="uid://c1rksok5d7xf7" path="res://assets/Terrains/clouds/AVXfw14_processed.png" id="15_bfgqp"]
+[ext_resource type="Texture2D" uid="uid://fvcfdkk857qg" path="res://assets/Terrains/clouds/AVXfw15_processed.png" id="16_jnbbg"]
+[ext_resource type="Texture2D" uid="uid://cwogjrgssxhfc" path="res://assets/Terrains/clouds/AVXfw16_processed.png" id="17_postq"]
+[ext_resource type="Texture2D" uid="uid://bkegp67y4rjy6" path="res://assets/Terrains/clouds/AVXfw17_processed.png" id="18_7hfb5"]
+[ext_resource type="TileSet" uid="uid://e5gea1nudkw5" path="res://resources/world.tres" id="19_vjqkx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r8u10"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_ou8f5")
+"texture": ExtResource("3_mpkw7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_njc5m")
+"texture": ExtResource("4_2j6n5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_hd6og")
+"texture": ExtResource("5_jjh61")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_vme42")
+"texture": ExtResource("6_wsvhm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_li76y")
+"texture": ExtResource("7_7v6hf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_kk3ob")
+"texture": ExtResource("8_b2dic")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_s8nq2")
+"texture": ExtResource("9_qxv33")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_wbb0i")
+"texture": ExtResource("10_cef3i")
 }],
 "loop": true,
 "name": &"cloud1",
@@ -53,28 +53,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_pillh")
+"texture": ExtResource("11_2embn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_8hw6n")
+"texture": ExtResource("12_g4usb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_vlbjt")
+"texture": ExtResource("13_tqvdd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_vfit7")
+"texture": ExtResource("14_5kkmb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_76tas")
+"texture": ExtResource("15_bfgqp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_5a4ys")
+"texture": ExtResource("16_jnbbg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_l2dih")
+"texture": ExtResource("17_postq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_74bsp")
+"texture": ExtResource("18_7hfb5")
 }],
 "loop": true,
 "name": &"cloud2",
@@ -82,11 +82,11 @@ animations = [{
 }]
 
 [node name="Menu" type="Node"]
-script = ExtResource("1_juxiu")
+script = ExtResource("1_4vccb")
 
 [node name="BG" type="ParallaxBackground" parent="."]
 layer = 0
-script = ExtResource("2_tjsmv")
+script = ExtResource("2_6ubn3")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
 motion_scale = Vector2(2, 1)
@@ -113,7 +113,7 @@ frame_progress = 0.52537
 
 [node name="Back" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AABrAG4AAAAAAAAAAAATAAoAAAACAAUAAAATAAkAAAACAAUAAAATAAgAAAADAAUAAAATAAcAAAACAAUAAAATAAYAAAAAAAUAAAATAAUAAAAAAAUAAAATAAQAAAADAAUAAAATAAMAAAAAAAUAAAATAAIAAAACAAUAAAATAAEAAAACAAUAAAATAAAAAAACAAQAAAASAAoAAAAEAAMAAAASAAkAAAAEAAEAAAASAAgAAAAEAAIAAAASAAcAAAAFAAUAAAASAAYAAAAEAAIAAAASAAUAAAAEAAYAAAASAAQAAAADAAYAAAASAAMAAAAAAAQAAAASAAIAAAAEAAYAAAASAAEAAAACAAYAAAASAAAAAAAFAAMAAAARAAoAAAACAAMAAAARAAkAAAAEAAIAAAARAAgAAAAEAAEAAAARAAcAAAAFAAUAAAARAAYAAAAEAAYAAAARAAUAAAABAAMAAAARAAQAAAABAAMAAAARAAMAAAAFAAYAAAARAAIAAAACAAMAAAARAAEAAAABAAMAAAARAAAAAAAFAAMAAAAQAAoAAAAEAAAAAAAQAAkAAAAEAAIAAAAQAAgAAAABAAYAAAAQAAcAAAAGAAYAAAAQAAYAAAADAAYAAAAQAAUAAAAAAAQAAAAQAAQAAAACAAMAAAAQAAMAAAACAAMAAAAQAAIAAAAEAAAAAAAQAAEAAAAEAAMAAAAQAAAAAAAFAAMAAAAPAAoAAAABAAMAAAAPAAkAAAAAAAQAAAAPAAgAAAAEAAQAAAAPAAcAAAAFAAUAAAAPAAYAAAACAAYAAAAPAAUAAAAEAAQAAAAPAAQAAAACAAYAAAAPAAMAAAADAAYAAAAPAAIAAAAEAAQAAAAPAAEAAAADAAMAAAAPAAAAAAAFAAQAAAAOAAoAAAACAAYAAAAOAAkAAAAEAAYAAAAOAAgAAAAFAAYAAAAOAAcAAAAAAAQAAAAOAAYAAAACAAMAAAAOAAUAAAABAAYAAAAOAAQAAAAEAAQAAAAOAAMAAAAEAAQAAAAOAAIAAAAEAAIAAAAOAAEAAAAFAAUAAAAOAAAAAAAFAAIAAAANAAoAAAAEAAIAAAANAAkAAAAFAAUAAAANAAgAAAAGAAYAAAANAAcAAAAEAAEAAAANAAYAAAAEAAEAAAANAAUAAAADAAMAAAANAAQAAAABAAYAAAANAAMAAAAEAAMAAAANAAIAAAAFAAUAAAANAAEAAAAEAAIAAAANAAAAAAAFAAIAAAAMAAoAAAAEAAIAAAAMAAkAAAAEAAAAAAAMAAgAAAADAAMAAAAMAAcAAAABAAYAAAAMAAYAAAACAAMAAAAMAAUAAAAEAAQAAAAMAAQAAAADAAYAAAAMAAMAAAAEAAMAAAAMAAIAAAADAAYAAAAMAAEAAAAAAAQAAAAMAAAAAAAFAAEAAAALAAoAAAAEAAEAAAALAAkAAAADAAMAAAALAAgAAAAFAAUAAAALAAcAAAABAAMAAAALAAYAAAAAAAQAAAALAAUAAAACAAYAAAALAAQAAAAEAAAAAAALAAMAAAAEAAEAAAALAAIAAAADAAYAAAALAAEAAAAFAAYAAAALAAAAAAAFAAIAAAAKAAoAAAADAAYAAAAKAAkAAAAEAAEAAAAKAAgAAAAEAAYAAAAKAAcAAAABAAMAAAAKAAYAAAAFAAYAAAAKAAUAAAACAAYAAAAKAAQAAAAFAAUAAAAKAAMAAAAEAAEAAAAKAAIAAAADAAYAAAAKAAEAAAAEAAAAAAAKAAAAAAAFAAEAAAAJAAoAAAABAAMAAAAJAAkAAAAEAAIAAAAJAAgAAAAGAAYAAAAJAAcAAAAEAAIAAAAJAAYAAAAFAAYAAAAJAAUAAAAAAAQAAAAJAAQAAAAFAAUAAAAJAAMAAAAEAAEAAAAJAAIAAAAFAAYAAAAJAAEAAAAEAAMAAAAJAAAAAAAFAAMAAAAIAAoAAAADAAYAAAAIAAkAAAAEAAMAAAAIAAgAAAAFAAYAAAAIAAcAAAABAAMAAAAIAAYAAAADAAMAAAAIAAUAAAACAAMAAAAIAAQAAAAEAAQAAAAIAAMAAAAFAAYAAAAIAAIAAAACAAMAAAAIAAEAAAAAAAQAAAAIAAAAAAAFAAIAAAAHAAoAAAAFAAYAAAAHAAkAAAAFAAYAAAAHAAgAAAABAAMAAAAHAAcAAAAEAAQAAAAHAAYAAAABAAYAAAAHAAUAAAAEAAYAAAAHAAQAAAABAAYAAAAHAAMAAAAEAAQAAAAHAAIAAAACAAMAAAAHAAEAAAADAAYAAAAHAAAAAAAFAAMAAAAGAAoAAAABAAYAAAAGAAkAAAACAAYAAAAGAAgAAAADAAYAAAAGAAcAAAAGAAYAAAAGAAYAAAAEAAIAAAAGAAUAAAABAAYAAAAGAAQAAAACAAMAAAAGAAMAAAAFAAUAAAAGAAIAAAABAAYAAAAGAAEAAAAEAAIAAAAGAAAAAAAFAAQAAAAFAAoAAAAEAAEAAAAFAAkAAAACAAYAAAAFAAgAAAADAAYAAAAFAAcAAAAFAAUAAAAFAAYAAAABAAMAAAAFAAUAAAACAAMAAAAFAAQAAAAFAAYAAAAFAAMAAAAEAAIAAAAFAAIAAAACAAYAAAAFAAEAAAADAAYAAAAFAAAAAAAFAAIAAAAEAAoAAAACAAYAAAAEAAkAAAAEAAIAAAAEAAgAAAAFAAYAAAAEAAcAAAAFAAYAAAAEAAYAAAAEAAAAAAAEAAUAAAAFAAUAAAAEAAQAAAADAAYAAAAEAAMAAAAAAAQAAAAEAAIAAAADAAYAAAAEAAEAAAACAAMAAAAEAAAAAAAFAAQAAAADAAoAAAAEAAYAAAADAAkAAAAEAAIAAAADAAgAAAAEAAEAAAADAAcAAAACAAMAAAADAAYAAAADAAMAAAADAAUAAAABAAMAAAADAAQAAAAFAAUAAAADAAMAAAAEAAQAAAADAAIAAAAEAAEAAAADAAEAAAAEAAEAAAADAAAAAAAFAAMAAAACAAoAAAAEAAAAAAACAAkAAAAAAAQAAAACAAgAAAAFAAUAAAACAAcAAAACAAMAAAACAAYAAAAFAAYAAAACAAUAAAADAAMAAAACAAQAAAAEAAMAAAACAAMAAAADAAMAAAACAAIAAAAFAAYAAAACAAEAAAABAAYAAAACAAAAAAAFAAIAAAABAAoAAAAEAAIAAAABAAkAAAAEAAAAAAABAAgAAAAEAAQAAAABAAcAAAAEAAEAAAABAAYAAAAAAAQAAAABAAUAAAAEAAYAAAABAAQAAAACAAMAAAABAAMAAAAEAAEAAAABAAIAAAAEAAAAAAABAAEAAAAGAAYAAAABAAAAAAAFAAMAAAAAAAoAAAAAAAYAAAAAAAkAAAAGAAQAAAAAAAgAAAAAAAYAAAAAAAcAAAAGAAMAAAAAAAYAAAAAAAYAAAAAAAUAAAAGAAMAAAAAAAQAAAAGAAMAAAAAAAMAAAAAAAYAAAAAAAIAAAAGAAQAAAAAAAEAAAAGAAUAAAAAAAAAAAABAAQAAAATAAsAAAADAAQAAAASAAsAAAAGAAIAAAARAAsAAAAGAAIAAAAQAAsAAAAGAAAAAAAPAAsAAAAEAAUAAAAOAAsAAAAGAAAAAAANAAsAAAAGAAEAAAAMAAsAAAAGAAAAAAALAAsAAAAGAAAAAAAKAAsAAAAGAAIAAAAJAAsAAAAEAAUAAAAIAAsAAAAGAAIAAAAHAAsAAAAGAAEAAAAGAAsAAAAEAAUAAAAFAAsAAAAGAAEAAAAEAAsAAAAGAAIAAAADAAsAAAAGAAIAAAACAAsAAAAEAAUAAAABAAsAAAAGAAIAAAAAAAsAAAAFAAAAAAA=")
-tile_set = ExtResource("1_tmd1k")
+tile_set = ExtResource("19_vjqkx")
 
 [node name="Play" type="Button" parent="."]
 anchors_preset = 8

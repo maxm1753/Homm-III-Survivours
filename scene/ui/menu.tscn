@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://wewmuap8vpa4"]
+
+[ext_resource type="PackedScene" uid="uid://uew5jvj5p5p6" path="res://scene/menu/pause_menu/pause_menu.tscn" id="1_iju4h"]
+
+[node name="Menu" type="CanvasLayer"]
+process_mode = 2
+
+[node name="PauseMenu" parent="." instance=ExtResource("1_iju4h")]
+process_mode = 2
+
+[editable path="PauseMenu"]

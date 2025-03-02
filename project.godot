@@ -14,7 +14,7 @@ config/name="Homm III Survivours"
 config/name_localized={
 "ru_RU": ""
 }
-run/main_scene="res://scene/menu/menu.tscn"
+run/main_scene="res://scene/menu/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 

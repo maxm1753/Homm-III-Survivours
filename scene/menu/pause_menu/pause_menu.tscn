@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://uew5jvj5p5p6"]
+
+[ext_resource type="Texture2D" uid="uid://rhp7v7loga8b" path="res://scene/menu/pause_menu/buttons/back/SORetrnH.bmp" id="1_colbj"]
+[ext_resource type="Texture2D" uid="uid://cdmk08oxl6ecw" path="res://scene/menu/pause_menu/buttons/back/SORetrnS.bmp" id="2_lyg0o"]
+[ext_resource type="Texture2D" uid="uid://dg25dod15cy15" path="res://scene/menu/pause_menu/buttons/retry/SORstrtH.bmp" id="3_b34xd"]
+[ext_resource type="Texture2D" uid="uid://b0c7wpb5pdhol" path="res://scene/menu/pause_menu/buttons/retry/SORstrtS.bmp" id="4_g64vu"]
+[ext_resource type="Texture2D" uid="uid://bfqpeu2ltwoyu" path="res://scene/menu/pause_menu/buttons/main_menu/SOMainH.bmp" id="5_s3a1h"]
+[ext_resource type="Texture2D" uid="uid://bufhpsal8yslq" path="res://scene/menu/pause_menu/buttons/main_menu/SOMainS.bmp" id="6_4wwxb"]
+[ext_resource type="Texture2D" uid="uid://cjveunbwpanyx" path="res://scene/menu/pause_menu/buttons/exit/SOQuitH.bmp" id="7_d5lb0"]
+[ext_resource type="Texture2D" uid="uid://cs2smli2gu5x2" path="res://scene/menu/pause_menu/buttons/exit/SOQuitS.bmp" id="8_qw05r"]
+[ext_resource type="Texture2D" uid="uid://b7r7rfmqg8f5g" path="res://scene/menu/pause_menu/PuzzLogo.png" id="9_xg3y7"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -156.5
+offset_right = 112.0
+offset_bottom = 156.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("9_xg3y7")
+stretch_mode = 2
+
+[node name="Back" type="TextureButton" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_colbj")
+texture_pressed = ExtResource("2_lyg0o")
+
+[node name="Restart" type="TextureButton" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_b34xd")
+texture_pressed = ExtResource("4_g64vu")
+
+[node name="MainMenu" type="TextureButton" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_s3a1h")
+texture_pressed = ExtResource("6_4wwxb")
+
+[node name="Exit" type="TextureButton" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("7_d5lb0")
+texture_pressed = ExtResource("8_qw05r")
