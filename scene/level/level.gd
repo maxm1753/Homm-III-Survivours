@@ -3,6 +3,8 @@ extends Node
 @export var end_screen_scene: PackedScene
 
 @onready var player: CharacterBody2D = %Player
+@onready var pause_menu: CanvasLayer = $PauseMenu
+
 
 
 func _ready():

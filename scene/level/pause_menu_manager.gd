@@ -1,7 +1,6 @@
 extends Node
 
-@onready var pause_menu: CanvasLayer = $"../PauseMenu"
-
+@onready var pause_menu: Control = $"../PauseMenu/PauseMenu"
 
 var game_paused: bool = false
 
@@ -30,7 +29,7 @@ func _on_restart_pressed() -> void:
 
 func _on_main_menu_pressed() -> void:
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://scene/menu/main_menu/menu.tscn")
+	get_tree().change_scene_to_file("res://scene/menu/main_menu/main_menu.tscn")
 
 
 func _on_exit_pressed() -> void:
