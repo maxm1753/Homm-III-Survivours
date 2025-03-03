@@ -1,6 +1,6 @@
-extends Node
+extends CanvasLayer
 
-@onready var pause_menu: Control = $"../PauseMenu/PauseMenu"
+@onready var pause_menu: Control = $PauseMenu
 
 var game_paused: bool = false
 
